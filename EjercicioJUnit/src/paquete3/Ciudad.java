@@ -11,5 +11,32 @@ package paquete3;
  */
 public class Ciudad {
     
+    private String nombres;
+    int poblacion;
     
+    public void establecerNombres(String n){
+        nombres = n;
+    }
+    
+    public void establecerPoblacion(int n){
+        poblacion = n;
+    }
+    
+    public String obtenerNombres(){
+        return nombres;
+    }
+    
+    public int obtenerPoblacion(){
+        return poblacion;
+    }
+    
+    @Override
+    public String toString(){
+        String cadena = String.format("Ciudad de Ecuador\n Nombre: %s\n\n\t"
+                + "Población: %d\n",
+                obtenerNombres(),
+                obtenerPoblacion());
+        return cadena; 
+                
+    }
 }
